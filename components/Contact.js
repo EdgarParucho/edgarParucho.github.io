@@ -22,7 +22,7 @@ export default {
         href="https://linkedin.com/in/edgarparucho"
         target="_blank"
         class="font-bold shadow-md text-white bg-teal-700 hover:scale-105 transition-all rounded-sm px-2 italic">
-          Find on LinkedIn
+          linkedin.com/in/edgarparucho
         </a>
       </div>
     </div>
@@ -40,7 +40,7 @@ export default {
       <span class="text-teal-600 dark:text-teal-500 text-xl font-bold">
         Write me
       </span>
-      <p class="mt-2">For opportunities to collaborate.</p>
+      <p class="mt-2">For feedback or collaborations.</p>
       <div class="justify-end space-x-2 flex mt-6">
         <a
         href="mailto:parucho.edgar@outlook.es"
@@ -72,14 +72,14 @@ export default {
       <span class="text-teal-600 dark:text-teal-500 text-xl font-bold">
         On Github
       </span>
-      <p class="mt-2">Find my repos.</p>
+      <p class="mt-2">Check my repos.</p>
       <div class="justify-end flex mt-6">
         <a
         href="https://www.github.com/EdgarParucho"
         target="_blank"
         class="font-bold shadow-md text-white bg-teal-700 hover:scale-105 transition-all rounded-sm px-2 italic"
         >
-          Find on GitHub
+          github.com/EdgarParucho
         </a>
       </div>
     </div>
