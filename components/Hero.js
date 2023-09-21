@@ -8,9 +8,8 @@ export default {
   <section class="my-20 px-10 w-full mx-auto">
     <div class="p-8 lg:w-7/12 mx-auto dark:bg-opacity-30 shadow-md bg-white dark:bg-zinc-950 dark:shadow-zinc-950">
 
-    <!--Card Image -->
-    <div class="mx-auto w-2/3 sm:w-1/3 border-white bg-gradient-to-tr from-zinc-950 to-zinc-900 dark:bg-opacity-75 border-2 rounded-full">
-      <img src="./assets/avatar.png" alt="The author: Edgar Parucho" class="rounded-full">
+    <div class="mx-auto w-2/3 sm:w-1/3 border-white bg-zinc-100 dark:bg-zinc-800 p-2 border-2 rounded-full">
+      <img src="./assets/avatar.jpg" alt="The author: Edgar Parucho" class="rounded-full">
     </div>
 
     <div class="grid gap-4 space-y-10 text-center rounded-xl">

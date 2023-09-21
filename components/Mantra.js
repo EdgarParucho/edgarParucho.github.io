@@ -82,8 +82,8 @@ export default {
           </div>
         </dl>
 
-        <div class="min-w-max">
-          <h3 class="text-zinc-900 dark:text-zinc-100 text-left font-bold text-xl">Development Stack</h3>
+        <div class="min-w-max mt-10">
+          <h3 class="text-zinc-900 dark:text-zinc-100 text-left font-bold text-xl">Built with</h3>
           <ul class="lg:flex grid items-center gap-1 mt-6">
             <li
             class="flex items-center gap-2 rounded-3xl shadow-md py-0.5 px-4 text-zinc-900 dark:text-zinc-100 dark:bg-zinc-800 bg-white font-medium"
