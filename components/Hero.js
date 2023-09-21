@@ -27,7 +27,7 @@ export default {
           <p class="text-lg my-4 xl:w-3/4 text-justify mx-auto">
             This site is for sharing part of my identity.
             If you sympathize with anything here, I believe we'll be gaining <span class=" text-zinc-900 dark:text-zinc-100">engagement </span>in our network
-            if we <a href="https://linkedin.com/in/edgarparucho" target="_blank" class="underline  text-zinc-900 dark:text-zinc-100">connect in LinkedIn.</a>
+            if we <a href="https://linkedin.com/in/edgarparucho" target="_blank" class="underline  text-zinc-900 dark:text-zinc-100">connect on LinkedIn.</a>
           </p>
 
         </div>

@@ -8,13 +8,11 @@ export default {
           About my work
         </h3>
         <p class="my-2">
-          As Web Developer, I dedicate to create and maintain apps, websites and similar tools running in the web browser.
+        As a Web Developer, I am dedicated to creating and maintaining apps, websites, and similar tools running in the web browser.
         </p>
         <p class="my-2">
-          I started as a self-taugh when I was working as a Help Desk Supervisor, I built <a href="#mantra" class="underline">Mantra</a> as a result.
-        </p>
-        <p class="my-2">
-          On the success of the project and a new passion discovered, I decided to dedicate fully to web development.
+        I started as a self-taught when I was working as a Help Desk Supervisor. <strong>I built <a href="#mantra" class="text-black dark:text-white underline">Mantra</a></strong> as a result.
+        On the project's success and a new passion discovered, I decided to dedicate myself fully to web development.
         </p>
       </article>
 
@@ -23,13 +21,14 @@ export default {
           When I'm not coding
         </h3>
         <p class="my-2">
-          I'm father of a 7 years old girl, and husband from the same time (yes, not a random fact).
+          I'm a father of a 7-year-old girl and a husband in love.
         </p>
         <p class="my-2">
-          As a family, we enjoy outdoors activities like going to the beach, park, or riding bikes.
+          As a family, we enjoy outdoor activities like going to the beach, the park, or riding bikes.
         </p>
         <p class="my-2">
-          Individually, I spend my time learning, specially from audio books, and online platforms such as <a href="https://platzi.com/p/parucho.edgar/" target="_blank" class="underline">Platzi</a> (currently), <a href="https://ed.team/u/edgarparucho/certificados" target="_blank" class="underline">EDteam</a>, and Vue Mastery.
+          Individually, I spend my time learning, especially from online platforms such as <a  href="https://platzi.com/p/parucho.edgar/" target="_blank" class="text-black dark:text-white underline">Platzi</a> (currently), <a href="https://ed.team/u/edgarparucho/certificados" target="_blank" class="text-black dark:text-white underline">EDteam</a>, and <a href="https://vuemastery.com/" target="_blank" class="text-black dark:text-white underline">Vue Mastery.</a>.
+          I also like audiobooks, training, and recently, meditation.
         </p>
       </article>
 

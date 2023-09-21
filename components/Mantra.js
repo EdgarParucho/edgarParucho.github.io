@@ -33,9 +33,9 @@ export default {
         </a>
       </div>
   
-      <div class="grid space-y-12 text-lg">
+      <div class="grid text-lg">
         <div>
-          <strong>
+          <strong class="text-black dark:text-white">
             A Help Desk web application.
           </strong>
           <p>
@@ -49,7 +49,7 @@ export default {
             Mantra's general goal was to improve the previous management system. That included several problems impacting the team's performance.
           </p>
           <p>
-            At its implementation, not only solved more than initially was intended to, but elevated the team's management capability.
+            With its implementation, it not only solved more than initially intended, but exceeded expectations.
           </p>
           <br>
           <p>
@@ -61,13 +61,14 @@ export default {
           <div class="dark:bg-opacity-30 shadow-md bg-white dark:bg-zinc-950 dark:shadow-zinc-950 p-4">
             <dt class="font-medium text-zinc-900 dark:text-zinc-50">Availability</dt>
             <dd class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-              A web browser and internet connection it's all you need to access.
-              Plus, it's a PWA (Progressive Web Application). This allows to install the app as a native software.
+              A web browser with internet access is all you need to use it. Plus, as a PWA (Progressive Web Application), it's possible to install the app as a native software.
             </dd>
           </div>
           <div class="dark:bg-opacity-30 shadow-md bg-white dark:bg-zinc-950 dark:shadow-zinc-950 p-4">
             <dt class="font-medium text-zinc-900 dark:text-zinc-50">UI / UX</dt>
-            <dd class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Users can catch up the status through cards, charts and tables with the most relevant data according to their role.</dd>
+            <dd class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+              Users can catch up on the status through cards, charts, and tables with the most relevant data according to their role.
+            </dd>
           </div>
           <div class="dark:bg-opacity-30 shadow-md bg-white dark:bg-zinc-950 dark:shadow-zinc-950 p-4">
             <dt class="font-medium text-zinc-900 dark:text-zinc-50">Automation</dt>

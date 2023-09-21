@@ -20,30 +20,30 @@ export default {
         What are your top 5 expense causes?
       </li>
       <li>
-        How long will take you save for that goal?
+        How long will take you to save for that goal?
       </li>
       <li>
-        How much you spend in non-mandatory causes?
+        How much you spend on non-mandatory causes?
       </li>
     </ul>
     <p class="mt-4 text-zinc-600 dark:text-zinc-400">
-      You may face those and other questions for planning, make changes in your lifestyle, or simply have control on this important matter.
+      You may face those and other questions for planning, making changes in your lifestyle, or simply having control over this important matter.
       <br>
       That's when Wallance will make your life easier.
     </p>
 
     <h3 class="text-zinc-900 dark:text-zinc-100 mt-12 text-left font-bold text-xl">The Objective</h3>
     <p class="mt-4 text-zinc-600 dark:text-zinc-400">
-      Wallance was built to fight a problem that could be defining more in your life than you know, finances management.
+      Wallance was built to fight a problem that could be defining more in your life than you know, financial management.
       <br>
-      The app offers you flexibility to organize your records as you wish for later analysis, tracking, and querying.
+      The app offers you the flexibility to organize your records as you wish for later analysis, tracking, and querying.
       Let's see how it does that.
     </p>
     <dl class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
       <div class="border-t border-zinc-200 pt-4">
         <dt class="font-medium text-zinc-900 dark:text-zinc-50">Record is the essence</dt>
         <dd class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-          Just &quot;feed&quot; the database to move the charts, numbers, and tables.
+          Just &quot;feed&quot; the database to move the charts, stats, and tables.
         </dd>
       </div>
       <div class="border-t border-zinc-200 pt-4">
@@ -59,7 +59,7 @@ export default {
         </dd>
       </div>
       <div class="border-t border-zinc-200 pt-4">
-        <dt class="font-medium text-zinc-900 dark:text-zinc-50">Gain control to never loose it</dt>
+        <dt class="font-medium text-zinc-900 dark:text-zinc-50">Gain control to never lose it</dt>
         <dd class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
           Just log in for a full status, including a space for custom queries.
         </dd>
@@ -69,10 +69,10 @@ export default {
   <div class="grid grid-cols-1 grid-rows-2 gap-1">
     <div class="flex gap-2">
       <div class="w-1/2">
-        <img src="./assets/projects/wallance-01.png" alt="Top down view of walnut card tray with embedded magnets and card groove." class="rounded-lg">
+        <img src="./assets/projects/wallance-09.png" alt="Top down view of walnut card tray with embedded magnets and card groove." class="rounded-lg">
       </div>
       <div class="w-1/2">
-        <img src="./assets/projects/wallance-02.png" alt="Top down view of walnut card tray with embedded magnets and card groove." class="rounded-lg">
+        <img src="./assets/projects/wallance-10.png" alt="Top down view of walnut card tray with embedded magnets and card groove." class="rounded-lg">
       </div>
     </div>
     <div>

@@ -7,12 +7,9 @@ export default {
   template: `
     <article class="w-4/6 mx-auto space-y-4 text-lg text-justify">
       <p>
-        I've been able to cover both back-end and front-end developer roles.
-      </p>
-      <p>
-        I consider my current profile <strong>stronger for front-end development</strong> since I've deepen my knowledge on
-        its responsabilities, like state management, scaffolding intuitive and visually-appealing interfaces, elevating UX, etc.
-        In consequence, my experience is higher using related technologies such as HTML, CSS, JavaScript, and specially,
+        <strong class="text-black dark:text-white">I consider my current profile stronger for front-end development</strong> since I've deepened my knowledge of
+        its responsibilities, like state management, scaffolding intuitive and visually appealing interfaces, elevating UX, etc.
+        Consequently, my experience is higher using related technologies such as HTML, CSS, JavaScript, and especially,
         Vue JS and its ecosystem.
       </p>
 

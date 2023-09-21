@@ -16,7 +16,7 @@ export default {
       <span class="text-teal-600 dark:text-teal-500 text-xl font-bold">
         Let's connect
       </span>
-      <p class="mt-2">Add me to your network.</p>
+      <p class="text-black dark:text-white mt-2">Add me to your network.</p>
       <div class="justify-end flex mt-6">
         <a
         href="https://linkedin.com/in/edgarparucho"
@@ -40,7 +40,7 @@ export default {
       <span class="text-teal-600 dark:text-teal-500 text-xl font-bold">
         Write me
       </span>
-      <p class="mt-2">For feedback or collaborations.</p>
+      <p class="text-black dark:text-white mt-2">For feedback or collaborations.</p>
       <div class="justify-end space-x-2 flex mt-6">
         <a
         href="mailto:parucho.edgar@outlook.es"
@@ -72,7 +72,7 @@ export default {
       <span class="text-teal-600 dark:text-teal-500 text-xl font-bold">
         On Github
       </span>
-      <p class="mt-2">Check my repos.</p>
+      <p class="text-black dark:text-white mt-2">Check my repos.</p>
       <div class="justify-end flex mt-6">
         <a
         href="https://www.github.com/EdgarParucho"
