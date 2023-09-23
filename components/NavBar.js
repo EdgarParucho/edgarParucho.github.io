@@ -1,5 +1,6 @@
 export default {
-  emit: ['toggleDarkMode'],
+  props: ['inEnglish'],
+  emit: ['toggleDarkMode', 'toggleLanguage'],
   template: `
   <nav class="bg-zinc-100 dark:bg-zinc-900 shadow-sm flex justify-around items-center py-2 sticky top-0 z-10">
     <h1 class="sign text-xl">
@@ -8,16 +9,24 @@ export default {
     <div class="flex items-center gap-2 font-bold">
       <label class="switch">
         <input type="checkbox" @click="$emit('toggleDarkMode')">
-        <span class="slider round"></span>
+        <span class="theme slider round"></span>
       </label>
+    </div>
+    <div class="flex items-center gap-2">
+      <button
+      @click="$emit('toggleLanguage')"
+      type="button"
+      class="text-xs shadow-sm bg-white dark:bg-zinc-800 px-2 py-0.5 active:scale-95 transition-all"
+      >ES | EN</button>
     </div>
     <a
     href="https://linkedin.com/in/edgarparucho"
     target="_blank"
-    class="text-white bg-teal-600 hover:scale-110 transition-all font-bold rounded-sm px-2 py-0.5 flex gap-2 items-center"
+    class="text-white bg-teal-600 hover:scale-110 transition-all font-bold rounded-sm px-2 py-0.5 flex gap-2 items-center w-28"
     >
       <i class="devicon-linkedin-plain text-lg"></i>
-      Connect
+      <span v-if="inEnglish">Connect</span>
+      <span v-else>Conectar</span>
     </a>
   </nav>`
 }

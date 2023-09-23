@@ -1,8 +1,8 @@
 export default {
-  props: ['emailCopied'],
+  props: ['inEnglish', 'emailCopied'],
   emits: ['copy'],
   template: `
-  <div class="xl:flex xl:justify-around mt-10">
+  <div class="xl:flex xl:justify-around">
     <div class="bg-white dark:bg-zinc-800 shadow-md rounded-lg h-40 w-96 p-8 mx-auto my-4 ring-1 ring-white">
       <div class="flex items-center justify-center space-x-2 -mt-12">
         <a
@@ -13,11 +13,17 @@ export default {
           <img width="36" height="36" src="https://img.icons8.com/ios-filled/50/linkedin-circled--v1.png" alt="LinkedIn logo">
         </a>
       </div>
-      <span class="text-teal-600 dark:text-teal-500 text-xl font-bold">
+      <span v-if="inEnglish" class="text-teal-600 dark:text-teal-500 text-xl font-bold">
         Let's connect
       </span>
-      <p class="text-black dark:text-white mt-2">
-        We could collaborate sometime.
+      <span v-else class="text-teal-600 dark:text-teal-500 text-xl font-bold">
+        Conectemos
+      </span>
+      <p v-if="inEnglish" class="text-black dark:text-white mt-2">
+        We can help each other sometime.
+      </p>
+      <p v-else class="text-black dark:text-white mt-2">
+        Podemos ayudarnos alguna vez.
       </p>
       <div class="justify-end flex mt-6">
         <a
@@ -39,11 +45,17 @@ export default {
           <img width="36" height="36" src="https://img.icons8.com/ios-filled/50/circled-envelope.png" alt="Email logo">
         </a>
       </div>
-      <span class="text-teal-600 dark:text-teal-500 text-xl font-bold">
+      <span v-if="inEnglish" class="text-teal-600 dark:text-teal-500 text-xl font-bold">
         Write me
       </span>
-      <p class="text-black dark:text-white mt-2">
-        Anything to say? Let me know.
+      <span v-else class="text-teal-600 dark:text-teal-500 text-xl font-bold">
+        Escríbeme
+      </span>
+      <p v-if="inEnglish" class="text-black dark:text-white mt-2">
+        I'm willing to help.
+      </p>
+      <p v-else class="text-black dark:text-white mt-2">
+        Estoy dispuesto a ayudar.
       </p>
       <div class="justify-end space-x-2 flex mt-6">
         <a
@@ -57,8 +69,8 @@ export default {
         class="shadow-md text-zinc-800 dark:text-white bg-zinc-100 dark:bg-zinc-700 hover:scale-110 transition-all rounded-sm px-2 italic"
         @click="$emit('copy')"
         >
-          <small v-if="emailCopied" class="text-xs">Copied!</small>
-          <small v-else class="text-xs">Copy</small>
+          <small v-if="emailCopied" class="text-xs">{{ inEnglish ? 'Copied!' : 'Copiado!' }}</small>
+          <small v-else class="text-xs">{{ inEnglish ? 'Copiado!' : 'Copiar' }}</small>
         </button>
       </div>
     </div>
@@ -74,10 +86,10 @@ export default {
         </a>
       </div>
       <span class="text-teal-600 dark:text-teal-500 text-xl font-bold">
-        On Github
+        GitHub
       </span>
       <p class="text-black dark:text-white mt-2">
-        Let's share code.
+        {{ inEnglish ? "Let's share code." : "Compartamos código." }}
       </p>
       <div class="justify-end flex mt-6">
         <a

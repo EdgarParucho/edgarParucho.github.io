@@ -3,6 +3,7 @@ export default {
   props: {
     links: Array,
     emailCopied: Boolean,
+    inEnglish: Boolean,
   },
   template: `
   <section class="my-20 px-10 w-full mx-auto">
@@ -17,16 +18,23 @@ export default {
         <div class="text-zinc-600 dark:text-zinc-400">
 
           <h1 class="text-5xl tracking-tight my-2">
-            Hi, I'm
-            <strong class="text-zinc-900 dark:text-zinc-100">Edgar Parucho</strong>
+            <span v-if="inEnglish">Hi, I'm</span>
+            <span v-else>Hola, soy</span>
+            <strong class="text-zinc-900 dark:text-zinc-100"> Edgar Parucho </strong>
           </h1>
 
-          <strong class="text-xl text-zinc-900 dark:text-zinc-100">Web Developer</strong>
+          <strong v-if="inEnglish" class="text-xl text-zinc-900 dark:text-zinc-100">Web Developer</strong>
+          <strong v-else class="text-xl text-zinc-900 dark:text-zinc-100">Desarrollador Web</strong>
 
-          <p class="text-lg my-4 xl:w-3/4 text-justify mx-auto">
+          <p v-if="inEnglish" class="text-lg my-4 xl:w-3/4 text-justify mx-auto">
             This site is for sharing part of my identity.
             If you sympathize with anything here, I believe we'll be gaining <span class=" text-zinc-900 dark:text-zinc-100">engagement </span>in our network
             if we <a href="https://linkedin.com/in/edgarparucho" target="_blank" class="underline  text-zinc-900 dark:text-zinc-100">connect on LinkedIn.</a>
+          </p>
+          <p v-else class="text-lg my-4 xl:w-3/4 text-justify mx-auto">
+            Este sitio es para compartir parte de mi identidad.
+            Si simpatizas con algo por acá, creo que ganaremos <span class=" text-zinc-900 dark:text-zinc-100">afinidad </span>en nuestra red
+            al <a href="https://linkedin.com/in/edgarparucho" target="_blank" class="underline  text-zinc-900 dark:text-zinc-100">conectar en LinkedIn.</a>
           </p>
 
         </div>

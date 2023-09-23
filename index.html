@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parucho's</title>
+  <title>I'm Edgar Parucho</title>
   <script src="./js/tailwind.js"></script>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
@@ -11,58 +11,55 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="manifest" href="./assets/site.webmanifest">
 </head>
 
-<body class="dark:bg-zinc-900 dark:text-white bg-zinc-100">
+<body class="dark:bg-zinc-900 dark:text-white bg-zinc-100 transition-colors">
   <div id="app" class="text-zinc-600 dark:text-zinc-400">
-    <nav-bar @toggle-dark-mode="toggleDarkMode"></nav-bar>
-    <hero :links="links" @copy="copyEmail" :email-copied="emailCopied"></hero>
+    <nav-bar @toggle-dark-mode="toggleDarkMode" @toggle-language="toggleLanguage" :in-english="inEnglish"></nav-bar>
+    <hero :in-english="inEnglish" :links="links" @copy="copyEmail" :email-copied="emailCopied"></hero>
 
-    <section class="w-full mx-auto my-36">
-      <h1 class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">
-        About me
-      </h1>
-      <h2 class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">
-        In a nutshell
-      </h2>
-      <about></about>
+    <section class="w-full mx-auto my-24">
+      <h1 v-if="inEnglish" class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">Technical Profile</h1>
+      <h1 v-else class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">Perfil Técnico</h1>
+      
+      <h2 v-if="inEnglish" class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">My skills and knowledge</h2>
+      <h2 v-else class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">Conocimientos y habilidades</h2>
+      <skills :in-english="inEnglish" :frontend-stack="frontendStack" :backend-stack="backendStack" :complement-stack="complementStack"></skills>
     </section>
 
-    <section class="w-full mx-auto my-36">
-      <h1 class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">
-        Technical Profile
-      </h1>
-      <h2 class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">
-        My skills and knowledge
-      </h2>
-      <skills :frontend-stack="frontendStack" :backend-stack="backendStack" :complement-stack="complementStack"></skills>
-    </section>
-
-    <section class="w-full mx-auto my-36">
-      <h1 class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">
-        My Projects
-      </h1>
-      <h2 class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">
-        Quality first
-      </h2>
+    <section class="w-full mx-auto my-24">
+      <h1 v-if="inEnglish" class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">My Projects</h1>
+      <h1 v-else class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">Mis Proyectos</h1>
+      
+      <h2 v-if="inEnglish" class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">I prioritize quality</h2>
+      <h2 v-else class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">Priorizo la calidad</h2>
       <article id="mantra" class="my-10">
-        <mantra :stack="mantraStack"></mantra>
+        <mantra :in-english="inEnglish" :stack="mantraStack"></mantra>
       </article>
       <article class="my-20">
-        <wallance :stack="wallanceStack"></wallance>
+        <wallance :in-english="inEnglish" :stack="wallanceStack"></wallance>
       </article>
     </section>
-    <section class="w-full my-10">
-      <h1 class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-4xl">
-        What can I do for you?
-      </h1>
-      <h2 class="text-center my-2 text-neutral-500 dark:text-neutral-400 text-xl">
-        Let me be part of the solution
-      </h2>
-      <contact @copy="copyEmail" :email-copied="emailCopied"></contact>
+
+    <section class="w-full mx-auto my-24">
+      <h1 v-if="inEnglish" class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">About me</h1>
+      <h1 v-else class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">Acerca de mi</h1>
+      
+      <h2 v-if="inEnglish" class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">In a nutshell</h2>
+      <h2 v-else class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">En pocas palabras</h2>
+      <about :in-english="inEnglish"></about>
+    </section>
+
+    <section class="w-full my-24">
+      <h1 v-if="inEnglish" class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">What can I do for you?</h1>
+      <h1 v-else class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">¿Qué puedo hacer por ti?</h1>
+      
+      <h2 v-if="inEnglish" class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">Let me be part of the solution</h2>
+      <h2 v-else class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">Déjame ser parte de la solución</h2>
+      <contact :in-english="inEnglish" @copy="copyEmail" :email-copied="emailCopied"></contact>
     </section>
   </div>
 
@@ -82,6 +79,7 @@
         document.documentElement.classList.add('dark')
         
         const emailCopied = ref(false);
+        const inEnglish = ref(false);
         const links = [
           { URL: 'https://www.linkedin.com/in/edgarparucho/', title: "Linkedin", icon: "https://img.icons8.com/ios-filled/50/linkedin-circled--v1.png" },
           { URL: 'mailto:parucho.edgar@outlook.es', title: "Email", icon: "https://img.icons8.com/ios-filled/50/circled-envelope.png" },
@@ -145,9 +143,21 @@
           else document.documentElement.classList.add('dark');
         }
 
+        function toggleLanguage() {
+          if (inEnglish.value) {
+            document.documentElement.lang = 'es';
+            inEnglish.value = false;
+          } else {
+            document.documentElement.lang = 'en';
+            inEnglish.value = true;
+          }
+        }
+
         return {
           links,
           toggleDarkMode,
+          toggleLanguage,
+          inEnglish,
           frontendStack,
           backendStack,
           complementStack,
@@ -201,13 +211,20 @@
     left: 4px;
     bottom: 4px;
     background-color: white;
-    background-image: url('https://img.icons8.com/glyph-neue/64/crescent-moon.png');
     background-size: 16px;
     background-repeat: no-repeat;
     background-position: 0%;
     background-position-x: center;
     -webkit-transition: .4s;
     transition: .4s;
+  }
+
+  .theme:before {
+    background-image: url('https://img.icons8.com/glyph-neue/64/crescent-moon.png');
+  }
+
+  .lang:before {
+    background-image: url('https://img.icons8.com/fluency/48/great-britain-circular.png');
   }
 
   input:checked + .slider {
