@@ -13,29 +13,21 @@ export default {
           <img width="36" height="36" src="https://img.icons8.com/ios-filled/50/linkedin-circled--v1.png" alt="LinkedIn logo">
         </a>
       </div>
-      <span v-if="inEnglish" class="text-teal-600 dark:text-teal-500 text-xl font-bold">
-        Let's connect
-      </span>
-      <span v-else class="text-teal-600 dark:text-teal-500 text-xl font-bold">
-        Conectemos
-      </span>
-      <p v-if="inEnglish" class="text-black dark:text-white mt-2">
-        We can help each other sometime.
-      </p>
-      <p v-else class="text-black dark:text-white mt-2">
-        Podemos ayudarnos alguna vez.
+      <h4 class="text-teal-600 dark:text-teal-500 text-xl font-bold">
+        {{ inEnglish ? "Let's connect" : "Conectemos" }}
+      </h4>
+      <p class="text-black dark:text-white mt-2">
+        {{ inEnglish ? "We can help each other sometime." : "Podemos ayudarnos alguna vez." }}
       </p>
       <div class="justify-end flex mt-6">
-        <a
-        href="https://linkedin.com/in/edgarparucho"
-        target="_blank"
-        class="font-bold shadow-md text-white bg-teal-700 hover:scale-105 transition-all rounded-sm px-2 italic">
+        <a href="https://linkedin.com/in/edgarparucho" target="_blank" class="font-bold shadow-md text-white bg-teal-700 hover:scale-105 transition-all rounded-sm px-2 italic">
           linkedin.com/in/edgarparucho
         </a>
       </div>
     </div>
 
     <div class="bg-white dark:bg-zinc-800 shadow-md rounded-lg h-40 w-96 p-8 mx-auto my-4 ring-1 ring-white">
+      
       <div class="flex items-center justify-center space-x-2 -mt-12">
         <a
         href="mailto:parucho.edgar@outlook.es"
@@ -45,18 +37,15 @@ export default {
           <img width="36" height="36" src="https://img.icons8.com/ios-filled/50/circled-envelope.png" alt="Email logo">
         </a>
       </div>
-      <span v-if="inEnglish" class="text-teal-600 dark:text-teal-500 text-xl font-bold">
-        Write me
-      </span>
-      <span v-else class="text-teal-600 dark:text-teal-500 text-xl font-bold">
-        Escríbeme
-      </span>
-      <p v-if="inEnglish" class="text-black dark:text-white mt-2">
-        I'm willing to help.
+
+      <h4 class="text-teal-600 dark:text-teal-500 text-xl font-bold">
+        {{ inEnglish ? "Write me" : "Escríbeme" }}
+      </h4>
+
+      <p class="text-black dark:text-white mt-2">
+        {{ inEnglish ? "I'm willing to help." : "Estoy dispuesto a ayudar." }}
       </p>
-      <p v-else class="text-black dark:text-white mt-2">
-        Estoy dispuesto a ayudar.
-      </p>
+
       <div class="justify-end space-x-2 flex mt-6">
         <a
         href="mailto:parucho.edgar@outlook.es"
@@ -85,9 +74,9 @@ export default {
           <img width="36" height="36" src="https://img.icons8.com/ios-filled/50/github--v1.png" alt="gitHub logo">
         </a>
       </div>
-      <span class="text-teal-600 dark:text-teal-500 text-xl font-bold">
+      <h4 class="text-teal-600 dark:text-teal-500 text-xl font-bold">
         GitHub
-      </span>
+      </h4>
       <p class="text-black dark:text-white mt-2">
         {{ inEnglish ? "Let's share code." : "Compartamos código." }}
       </p>

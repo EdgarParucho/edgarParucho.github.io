@@ -4,38 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>I'm Edgar Parucho</title>
-  <script src="./js/tailwind.js"></script>
+  
+  <script src="./lib/tailwind.js"></script>
+  <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="manifest" href="./assets/site.webmanifest">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/meta/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/meta/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/meta/favicon-32x32.png">
+  <link rel="manifest" href="./assets/meta/site.webmanifest">
 </head>
 
 <body class="dark:bg-zinc-900 dark:text-white bg-zinc-100 transition-colors">
-  <div id="app" class="text-zinc-600 dark:text-zinc-400">
+  <div id="app" class="hidden text-zinc-600 dark:text-zinc-400">
     <nav-bar @toggle-dark-mode="toggleDarkMode" @toggle-language="toggleLanguage" :in-english="inEnglish"></nav-bar>
     <hero :in-english="inEnglish" :links="links" @copy="copyEmail" :email-copied="emailCopied"></hero>
 
     <section class="w-full mx-auto my-24">
-      <h1 v-if="inEnglish" class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">Technical Profile</h1>
-      <h1 v-else class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">Perfil Técnico</h1>
-      
-      <h2 v-if="inEnglish" class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">My skills and knowledge</h2>
-      <h2 v-else class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">Conocimientos y habilidades</h2>
+      <h1 class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">
+        {{ inEnglish ? 'Technical Profile' : 'Perfil Técnico' }}
+      </h1>
+
+      <h2 class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">
+        {{ inEnglish ? 'My skills and knowledge' : 'Conocimientos y habilidades' }}
+      </h2>
       <skills :in-english="inEnglish" :frontend-stack="frontendStack" :backend-stack="backendStack" :complement-stack="complementStack"></skills>
     </section>
 
     <section class="w-full mx-auto my-24">
-      <h1 v-if="inEnglish" class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">My Projects</h1>
-      <h1 v-else class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">Mis Proyectos</h1>
-      
-      <h2 v-if="inEnglish" class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">I prioritize quality</h2>
-      <h2 v-else class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">Priorizo la calidad</h2>
+      <h1 class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">
+        {{ inEnglish ? 'My Projects' : 'Mis Proyectos' }}
+      </h1>
+      <h2 class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">
+        {{ inEnglish ? 'I prioritize quality' : 'Priorizo la calidad' }}
+      </h2>
       <article id="mantra" class="my-10">
         <mantra :in-english="inEnglish" :stack="mantraStack"></mantra>
       </article>
@@ -45,220 +51,35 @@
     </section>
 
     <section class="w-full mx-auto my-24">
-      <h1 v-if="inEnglish" class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">About me</h1>
-      <h1 v-else class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">Acerca de mi</h1>
+      <h1 class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">
+        {{ inEnglish ? 'About me' : 'Acerca de mi' }}
+      </h1>
       
-      <h2 v-if="inEnglish" class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">In a nutshell</h2>
-      <h2 v-else class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">En pocas palabras</h2>
+      <h2 class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">
+        {{ inEnglish ? 'In a nutshell' : 'En pocas palabras' }}
+      </h2>
       <about :in-english="inEnglish"></about>
     </section>
 
     <section class="w-full my-24">
-      <h1 v-if="inEnglish" class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">What can I do for you?</h1>
-      <h1 v-else class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">¿Qué puedo hacer por ti?</h1>
-      
-      <h2 v-if="inEnglish" class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">Let me be part of the solution</h2>
-      <h2 v-else class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">Déjame ser parte de la solución</h2>
+      <h1 class="text-zinc-900 dark:text-zinc-100 text-center font-bold text-5xl">
+        {{ inEnglish ? 'What can I do for you?' : '¿Qué puedo hacer por ti?' }}
+      </h1>
+
+      <h2 class="text-center mt-2 mb-12 text-neutral-500 dark:text-neutral-400 text-xl">
+        {{ inEnglish ? 'Let me be part of the solution' : 'Déjame ser parte de la solución' }}
+      </h2>
       <contact :in-english="inEnglish" @copy="copyEmail" :email-copied="emailCopied"></contact>
     </section>
   </div>
 
-  <script type="module">
-    import { createApp, ref } from './js/vue.js'
-    import NavBar from './components/NavBar.js'
-    import Hero from './components/Hero.js'
-    import About from './components/About.js'
-    import Mantra from './components/Mantra.js'
-    import Skills from './components/Skills.js'
-    import Wallance from './components/Wallance.js'
-    import Contact from './components/Contact.js'
-  
-    createApp({
-      components: { NavBar, Hero, About, Mantra, Skills, Wallance, Contact },
-      setup() {
-        document.documentElement.classList.add('dark')
-        
-        const emailCopied = ref(false);
-        const inEnglish = ref(false);
-        const links = [
-          { URL: 'https://www.linkedin.com/in/edgarparucho/', title: "Linkedin", icon: "https://img.icons8.com/ios-filled/50/linkedin-circled--v1.png" },
-          { URL: 'mailto:parucho.edgar@outlook.es', title: "Email", icon: "https://img.icons8.com/ios-filled/50/circled-envelope.png" },
-          { URL: 'https://www.github.com/EdgarParucho', title: "GitHub", icon: "https://img.icons8.com/ios-filled/50/github--v1.png",  }
-        ]
-        
-        const frontendStack = [
-          { name: 'HTML', icon: `<i class="devicon-html5-plain colored"></i>` },
-          { name: 'CSS', icon: `<i class="devicon-css3-plain colored"></i>` },
-          { name: 'JavaScript', icon: `<i class="bg-black devicon-javascript-plain colored"></i>` },
-          { name: 'Vue JS', icon: `<img src="./assets/svg/vue.svg" alt="Vue JS" class="w-5">` },
-          { name: 'Vuetify', icon: `<i class="devicon-vuetify-line colored"></i>` },
-          { name: 'Tailwind CSS', icon: `<i class="devicon-tailwindcss-plain colored"></i>` },
-        ]
-
-        const backendStack = [
-          { name: 'Node JS', icon: `<i class="devicon-nodejs-plain colored"></i>` },
-          { name: 'Express', icon: `<i class="text-xl devicon-express-original"></i>` },
-          { name: 'Mongo DB', icon: `<i class="devicon-mongodb-plain colored"></i>` },
-          { name: 'Postgre SQL', icon: `<i class="devicon-postgresql-plain colored"></i>` },
-          { name: 'Sequelize', icon: `<i class="devicon-sequelize-plain colored"></i>` },
-        ]
-        
-        const complementStack = [
-          { name: 'Git', icon: `<i class="devicon-git-plain colored"></i>` },
-          { name: 'GitHub', icon: `<i class="devicon-github-plain"></i>` },
-          { name: 'Trello', icon: `<i class="devicon-trello-plain colored"></i>` },
-          { name: 'Jira', icon: `<i class="devicon-jira-plain colored"></i>` },
-        ]
-
-        const wallanceStack = [
-          { name: 'Node JS', icon: `<i class="devicon-nodejs-plain colored"></i>` },
-          { name: 'Express', icon: `<i class="text-xl devicon-express-original"></i>` },
-          { name: 'Postgre SQL', icon: `<i class="devicon-postgresql-plain colored"></i>` },
-          { name: 'Sequelize', icon: `<i class="devicon-sequelize-plain colored"></i>` },
-          { name: 'Vue JS', icon: `<img src="./assets/svg/vue.svg" alt="Vue JS" class="w-5">` },
-          { name: 'Pinia', icon: `<img src="https://begoniaxifu.com/wp-content/uploads/2021/11/logo-2-1-1.png" alt="Pinia" class="w-3.5">` },
-          { name: 'Vue Router', icon: `<img src="https://logodix.com/logo/853240.png" alt="Vue Router" class="w-7">` },
-          { name: 'Tailwind CSS', icon: `<i class="devicon-tailwindcss-plain colored"></i>` },
-        ]
-
-        const mantraStack = [
-          { name: 'Node JS', icon: `<i class="devicon-nodejs-plain colored"></i>` },
-          { name: 'Express', icon: `<i class="text-xl devicon-express-original"></i>` },
-          { name: 'Mongo DB', icon: `<i class="devicon-mongodb-plain colored"></i>` },
-          { name: 'Vue JS', icon: `<img src="./assets/svg/vue.svg" alt="Vue JS" class="w-5">` },
-          { name: 'Vuetify', icon: `<i class="devicon-vuetify-line colored"></i>` },
-          { name: 'Vuex', icon: `<img src="https://yamoo9.github.io/vuex/images/vuex.png" alt="Vuex" class="w-5">` },
-          { name: 'Vue Router', icon: `<img src="https://logodix.com/logo/853240.png" alt="Vue Router" class="w-7">` },
-        ]
-
-        function copyEmail() {
-          navigator.clipboard.writeText('parucho.edgar@outlook.es')
-          emailCopied.value = true;
-
-        };
-
-        function toggleDarkMode() {
-          const themeIsDark = document.documentElement.classList.contains("dark");
-          if (themeIsDark) document.documentElement.classList.remove('dark');
-          else document.documentElement.classList.add('dark');
-        }
-
-        function toggleLanguage() {
-          if (inEnglish.value) {
-            document.documentElement.lang = 'es';
-            inEnglish.value = false;
-          } else {
-            document.documentElement.lang = 'en';
-            inEnglish.value = true;
-          }
-        }
-
-        return {
-          links,
-          toggleDarkMode,
-          toggleLanguage,
-          inEnglish,
-          frontendStack,
-          backendStack,
-          complementStack,
-          copyEmail,
-          emailCopied,
-          wallanceStack,
-          mantraStack
-        }
-      }
-    }).mount('#app')
-  </script>
   <script>
-    tailwind.config = {
-      darkMode: 'class',
-    }
+    window.addEventListener('load', function() {
+      document.querySelector('.hidden').classList.remove('hidden');
+    });
   </script>
-  <style>
-    /* The switch - the box around the slider */
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 24px;
-  }
 
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-
-  /* The slider */
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: transparent;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 16px;
-    width: 16px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    background-size: 16px;
-    background-repeat: no-repeat;
-    background-position: 0%;
-    background-position-x: center;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-
-  .theme:before {
-    background-image: url('https://img.icons8.com/glyph-neue/64/crescent-moon.png');
-  }
-
-  .lang:before {
-    background-image: url('https://img.icons8.com/fluency/48/great-britain-circular.png');
-  }
-
-  input:checked + .slider {
-    background-color: #ccc;
-  }
-
-  input:focus + .slider {
-    box-shadow: 0 0 1px teal;
-  }
-
-  input:checked + .slider:before {
-    -webkit-transform: translateX(16px);
-    -ms-transform: translateX(16px);
-    transform: translateX(16px);
-  }
-
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-
-  .slider.round:before {
-    border-radius: 50%;
-  }
-
-  .sign {
-    /* font-family: 'Parisienne', cursive; */
-    font-family: 'Sriracha', cursive;
-  }
-
-  .strike {
-    text-decoration: line-through;
-  }
-
-  </style>
+  <script src="./js/script.js" type="module">
+  </script>
 </body>
 </html>

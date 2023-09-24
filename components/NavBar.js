@@ -16,8 +16,11 @@ export default {
       <button
       @click="$emit('toggleLanguage')"
       type="button"
-      class="text-xs shadow-sm bg-white dark:bg-zinc-800 px-2 py-0.5 active:scale-95 transition-all"
-      >ES | EN</button>
+      class="text-xs shadow-sm text-black dark:text-white bg-white dark:bg-zinc-800 px-2 py-0.5 active:scale-95 transition-all"
+      >
+        <span :class="{ 'font-bold': inEnglish }"> EN </span>|
+        <span :class="{ 'font-bold': !inEnglish }"> ES </span>
+      </button>
     </div>
     <a
     href="https://linkedin.com/in/edgarparucho"
@@ -25,8 +28,7 @@ export default {
     class="text-white bg-teal-600 hover:scale-110 transition-all font-bold rounded-sm px-2 py-0.5 flex gap-2 items-center w-28"
     >
       <i class="devicon-linkedin-plain text-lg"></i>
-      <span v-if="inEnglish">Connect</span>
-      <span v-else>Conectar</span>
+      <span>{{ inEnglish ? "Connect" : "Conectar" }}</span>
     </a>
   </nav>`
 }
