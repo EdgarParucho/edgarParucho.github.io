@@ -18,12 +18,12 @@ html {
 
 body {
   padding-right: 2rem;
-  background-color: var(--lightgrey);
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-size: 1.8rem;
   color: var(--grey);
+  background-color: var(--lightgrey);
 }
 
 h1 {
@@ -68,28 +68,28 @@ h2, h3, h4 {
   transform: scale(1);
 }
 
-.header {
+.section {
   height: 100vh;
   margin-left: 5.2rem;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
-.header__primary-container,
-.header__secondary-container {
-  text-align: right;
+.primary-container,
+.secondary-container {
   display: flex;
   flex-direction: column;
-  align-items: end;
 }
 
-.header__secondary-container {
-  height: 40%;
-}
-
-.header__primary-container {
+.primary-container {
   height: 60%;
   justify-content: end;
+  text-align: right;
+}
+
+.secondary-container {
+  height: 40%;
+  width: 90%;
 }
 
 .heading {
@@ -99,11 +99,32 @@ h2, h3, h4 {
 }
 
 .subheading {
-  margin-bottom: 1rem;
   font-size: 2.8rem;
 }
 
-@media only screen and (min-width: 580px) {
+.paragraph {
+  margin-top: 1rem;
+}
+
+.about__picture-container {
+  max-width: 360px;
+  height: 100%;
+  margin: 0 0 0 auto;
+  display: flex;
+}
+
+.about__picture {
+  display: block;
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  align-self: center;
+  border-radius: 4px;
+  box-shadow: -12px -16px;
+  filter: grayscale() contrast(80%);
+}
+
+@media only screen and (min-width: 640px) {
 
   .heading {
     font-size: 10rem;
@@ -114,10 +135,10 @@ h2, h3, h4 {
     font-size: 3rem;
   }
   
-  .paragraph {
-    width: 400px;
+  .secondary-container {
+    width: 70%;
   }
-  
+
 }
 
 
@@ -128,31 +149,36 @@ h2, h3, h4 {
     line-height: 11.4rem;
   }
   
+  .secondary-container {
+    width: 60%;
+  }
+
 }
 
 @media only screen and (min-width: 1024px) {
   
-  .header {
-    flex-direction: row;
-    align-items: start;
+  .section {
+    flex-direction: row-reverse;
     justify-content: space-between;
-  }
-
-  .header__secondary-container {
-    text-align: left;
+    }
+  
+  .secondary-container {
+    width: 30%;
     justify-content: end;
-    padding-bottom: .9rem;
+    text-align: left;
   }
   
-  .header__primary-container,
-  .header__secondary-container {
+  .primary-container,
+  .secondary-container {
     height: 70%;
   }
-
+  
   .heading {
     font-size: 12.8rem;
-    line-height: 12.8rem;
-    margin-bottom: 0;
   }
+
+  .about__picture {
+    align-self: end;
+  }  
 
 }
