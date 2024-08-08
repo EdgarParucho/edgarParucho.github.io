@@ -1,12 +1,158 @@
-*{
+/* Following BEM Methodology / https://en.bem.info/methodology/quick-start */
+
+:root {
+  --lightgrey: #D9D9D9;
+  --grey: #262626;
+  --darkgrey: #060606;
+}
+
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html{
+html {
   font-size: 62.5%;
-  font-family: sans-serif;
+}
+
+body {
+  padding-right: 2rem;
+  background-color: var(--lightgrey);
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1.8rem;
+  color: var(--grey);
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  color: var(--darkgrey);
+}
+
+h2, h3, h4 {
+  font-family: "Radley", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.sidebar {
+  top: 15%;
+  width: 4rem;
+  height: 8rem;
+  padding: 2px;
+  position: fixed;
+  background-color: var(--darkgrey);
+}
+
+.sidebar__link {
+  width: 100%;
+  height: 50%;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(.9);
+  transition: transform .2s;
+}
+
+.sidebar__link_linkedin {
+  background-image: url('https://img.icons8.com/?size=100&id=84888&format=png&color=D9D9D9');
+}
+
+.sidebar__link_github {
+  background-image: url('https://img.icons8.com/?size=100&id=20675&format=png&color=D9D9D9');
+}
+
+.sidebar__link:hover {
+  transform: scale(1);
+}
+
+.header {
+  height: 100vh;
+  margin-left: 5.2rem;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.header__primary-container,
+.header__secondary-container {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.header__secondary-container {
+  height: 40%;
+}
+
+.header__primary-container {
+  height: 60%;
+  justify-content: end;
+}
+
+.heading {
+  margin-bottom: 2rem;
+  font-size: 7.4rem;
+  line-height: 8.2rem;
+}
+
+.subheading {
+  margin-bottom: 1rem;
+  font-size: 2.8rem;
+}
+
+@media only screen and (min-width: 580px) {
+
+  .heading {
+    font-size: 10rem;
+    line-height: 11rem;
+  }
+
+  .subheading {
+    font-size: 3rem;
+  }
+  
+  .paragraph {
+    width: 400px;
+  }
+  
 }
 
 
+@media only screen and (min-width: 768px) {
+
+  .heading {
+    font-size: 11rem;
+    line-height: 11.4rem;
+  }
+  
+}
+
+@media only screen and (min-width: 1024px) {
+  
+  .header {
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  .header__secondary-container {
+    text-align: left;
+    justify-content: end;
+    padding-bottom: .9rem;
+  }
+  
+  .header__primary-container,
+  .header__secondary-container {
+    height: 70%;
+  }
+
+  .heading {
+    font-size: 12.8rem;
+    line-height: 12.8rem;
+    margin-bottom: 0;
+  }
+
+}
