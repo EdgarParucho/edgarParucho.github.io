@@ -31,15 +31,8 @@ header, section {
   margin-left: 5.2rem;
 }
 
-h1 {
-  font-family: "Playfair Display", serif;
-  color: var(--darkgrey);
-}
-
-h2, h3, h4 {
-  font-family: "Radley", serif;
-  font-weight: 400;
-  font-style: italic;
+ul {
+  list-style: none;
 }
 
 hr {
@@ -101,12 +94,17 @@ hr {
 }
 
 .heading {
+  font-family: "Playfair Display", serif;
+  color: var(--darkgrey);
   margin-bottom: 2rem;
   font-size: 7.4rem;
   line-height: 8.2rem;
 }
 
 .subheading {
+  font-family: "Radley", serif;
+  font-weight: 400;
+  font-style: italic;
   font-size: 2.8rem;
 }
 
@@ -131,8 +129,6 @@ hr {
   box-shadow: -12px -16px;
   filter: grayscale() contrast(80%);
 }
-
-/* PROJECTS SECTION */
 
 .projects {
   margin-left: 5.2rem;
@@ -233,6 +229,74 @@ hr {
   text-align: center;
   font-size: 1.4rem;
   color: var(--grey);
+}
+
+.contact-section {
+  padding-top: 4rem;
+  height: 90vh;
+}
+
+.contact-section__heading {
+  text-align: right;
+}
+
+.contact-section__text {
+  text-align: right;
+  margin-top: 4rem;
+}
+
+.contact-section__actions {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: 2rem;
+}
+
+.contact-section__action {
+  width: 206px;
+  padding-left: 2.2rem;
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1.8rem;
+  text-align: left;
+  color: var(--grey);
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: left;
+  cursor: pointer;
+}
+
+.contact-section__action_linkedin {
+  background-image: url('https://img.icons8.com/?size=100&id=84888&format=png&color=262626');
+}
+
+.contact-section__action_github {
+  background-image: url('https://img.icons8.com/?size=100&id=20675&format=png&color=262626');
+}
+
+.contact-section__action_goodreads {
+  background-image: url('https://img.icons8.com/?size=100&id=25849&format=png&color=262626');
+}
+
+.contact-section__action_email {
+  background-image: url('https://img.icons8.com/?size=100&id=EyMZ7vZhNP46&format=png&color=262626');
+}
+
+.footer {
+  width: 100%;
+  height: 5vh;
+}
+
+.footer__text {
+  font-family: "Radley", serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  text-align: center;
 }
 
 @media only screen and (min-width: 640px) {
