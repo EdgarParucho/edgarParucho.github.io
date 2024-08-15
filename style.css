@@ -191,7 +191,7 @@ hr {
   overflow-y: hidden;
 }
 
-.project-cards__section {
+.project-cards__container {
   overflow-x: auto;
   height: 85%;
   padding: 1rem;
