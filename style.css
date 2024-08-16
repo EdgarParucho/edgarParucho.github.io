@@ -4,7 +4,13 @@
   --primary: #D9D9D9;
   --secondary: #262626;
   --accent: #060606;
+  --github-icon: url('https://img.icons8.com/?size=100&id=20675&format=png&color=262626');
+  --link-icon: url('https://img.icons8.com/?size=100&id=o90MnZhnB2CM&format=png&color=262626');  
+  --linkedin-icon: url('https://img.icons8.com/?size=100&id=84888&format=png&color=262626');  
+  --goodreads-icon: url('https://img.icons8.com/?size=100&id=25849&format=png&color=262626');
+  --email-icon: url('https://img.icons8.com/?size=100&id=EyMZ7vZhNP46&format=png&color=262626');  
 }
+
 
 * {
   box-sizing: border-box;
@@ -50,11 +56,11 @@ hr {
 }
 
 .sidebar__link_linkedin {
-  background-image: url('https://img.icons8.com/?size=100&id=84888&format=png&color=D9D9D9');
+  background-image: var(--linkedin-icon);
 }
 
 .sidebar__link_github {
-  background-image: url('https://img.icons8.com/?size=100&id=20675&format=png&color=D9D9D9');
+  background-image: var(--github-icon);
 }
 
 .sidebar__link:hover {
@@ -295,23 +301,23 @@ hr {
 }
 
 .link_bg-github {
-  background-image: url('https://img.icons8.com/?size=100&id=20675&format=png&color=262626');
+  background-image: var(--github-icon);
 }
 
 .link_bg-link {
-  background-image: url('https://img.icons8.com/?size=100&id=o90MnZhnB2CM&format=png&color=262626');
+  background-image: var(--link-icon);
 }
 
 .link_bg-linkedin {
-  background-image: url('https://img.icons8.com/?size=100&id=84888&format=png&color=262626');
+  background-image: var(--linkedin-icon);
 }
 
 .link_bg-goodreads {
-  background-image: url('https://img.icons8.com/?size=100&id=25849&format=png&color=262626');
+  background-image: var(--goodreads-icon);
 }
 
 .link_bg-email {
-  background-image: url('https://img.icons8.com/?size=100&id=EyMZ7vZhNP46&format=png&color=262626');
+  background-image: var(--email-icon);
 }
 
 .footer-text {
