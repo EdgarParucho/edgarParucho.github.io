@@ -109,6 +109,18 @@ hr {
   font-style: italic;
 }
 
+.subheading_mr-auto {
+  margin-right: auto;
+}
+
+.subheading_mt-2 {
+  margin-top: 2rem;
+}
+
+.subheading_text-sm {
+  font-size: 2.2rem;
+}
+
 .paragraph {
   margin-top: 1rem;
 }
@@ -242,9 +254,13 @@ hr {
   margin-top: 4rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 2rem;
   list-style: none;
+}
+
+.link-container_no-wrap {
+  flex-wrap: nowrap;
 }
 
 .link {
@@ -264,6 +280,18 @@ hr {
   background-size: 18px;
   background-position: right;
   cursor: pointer;
+}
+
+.link_mt-2 {
+  margin-top: 2rem;
+}
+
+.link_mb-2 {
+  margin-bottom: 2rem;
+}
+
+.link_ml-auto {
+  margin-left: auto;
 }
 
 .link_bg-github {
@@ -303,6 +331,10 @@ hr {
   .subheading {
     font-size: 3rem;
   }
+
+  .subheading_text-sm {
+    font-size: 2.4rem;
+  }
   
   .section__div-md {
     width: 70%;
@@ -313,8 +345,7 @@ hr {
   }
   
   .link-container {
-    flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   .link {
@@ -358,6 +389,16 @@ hr {
   .section__div-lg,
   .section__div-md {
     justify-content: center;
+  }
+
+  .section__div-lg_align-start,
+  .section__div-md_align-start {
+    align-self: start;
+    margin-top: 2rem;
+  }
+
+  .section__div-lg_pl-8 {
+    padding-left: 8rem;
   }
   
   .heading {
