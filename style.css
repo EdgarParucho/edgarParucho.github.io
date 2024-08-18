@@ -4,13 +4,14 @@
   --primary: #D9D9D9;
   --secondary: #262626;
   --accent: #060606;
-  --github-icon: url('https://img.icons8.com/?size=100&id=20675&format=png&color=262626');
-  --link-icon: url('https://img.icons8.com/?size=100&id=o90MnZhnB2CM&format=png&color=262626');  
-  --linkedin-icon: url('https://img.icons8.com/?size=100&id=84888&format=png&color=262626');  
+  --linkedin-icon_primary: url('https://img.icons8.com/?size=100&id=84888&format=png&color=D9D9D9');
+  --linkedin-icon_secondary: url('https://img.icons8.com/?size=100&id=84888&format=png&color=262626');
+  --github-icon_primary: url('https://img.icons8.com/?size=100&id=20675&format=png&color=D9D9D9');
+  --github-icon_secondary: url('https://img.icons8.com/?size=100&id=20675&format=png&color=262626');
+  --email-icon: url('https://img.icons8.com/?size=100&id=EyMZ7vZhNP46&format=png&color=262626');
+  --link-icon: url('https://img.icons8.com/?size=100&id=o90MnZhnB2CM&format=png&color=262626');
   --goodreads-icon: url('https://img.icons8.com/?size=100&id=25849&format=png&color=262626');
-  --email-icon: url('https://img.icons8.com/?size=100&id=EyMZ7vZhNP46&format=png&color=262626');  
 }
-
 
 * {
   box-sizing: border-box;
@@ -37,11 +38,11 @@ hr {
 }
 
 .sidebar {
-  top: 10rem;
-  width: 4rem;
-  height: 8rem;
+  position: absolute;
+  top: 100px;
+  width: 40px;
+  height: 80px;
   padding: 2px;
-  position: fixed;
   background-color: var(--accent);
 }
 
@@ -56,11 +57,11 @@ hr {
 }
 
 .sidebar__link_linkedin {
-  background-image: var(--linkedin-icon);
+  background-image: var(--linkedin-icon_primary);
 }
 
 .sidebar__link_github {
-  background-image: var(--github-icon);
+  background-image: var(--github-icon_primary);
 }
 
 .sidebar__link:hover {
@@ -143,8 +144,8 @@ hr {
   max-height: 90%;
   object-fit: cover;
   align-self: center;
-  border-radius: 4px;
-  box-shadow: -8px -10px;
+  border-radius: 2px;
+  box-shadow: -10px -10px;
   filter: grayscale() contrast(80%);
 }
 
@@ -156,6 +157,10 @@ hr {
   gap: 4px;
 }
 
+.checkbox {
+  display: none;
+}
+
 .label {
   width: 80px;
   height: 18px;
@@ -164,11 +169,15 @@ hr {
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
-  background-color: var(--primary);
   border-radius: 20px;
 }
 
 .checkbox:checked + .label {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.label_filled {
   background-color: var(--secondary);
   color: var(--primary);
 }
@@ -183,10 +192,6 @@ hr {
 
 .label_text-sm {
   font-size: 1rem;
-}
-
-.checkbox {
-  display: none;
 }
 
 .small {
@@ -208,8 +213,8 @@ hr {
   padding-bottom: 2rem;
   text-align: left;
   border-radius: 2px;
-  background-color: var(--secondary);
-  box-shadow: 0px 2px 12px 1px rgba(0, 0, 0, .1);
+  background-color: var(--primary);
+  box-shadow: 2px 2px rgba(0, 0, 0, .1);
 }
 
 .card__picture {
@@ -226,7 +231,7 @@ hr {
   margin-left: 1rem;
   font-family: "Radley", serif;
   font-size: 1.8rem;
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .card__text {
@@ -234,7 +239,7 @@ hr {
   margin-left: 1rem;
   text-align: left;
   font-size: 1rem;
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .card__label-container {
@@ -253,7 +258,7 @@ hr {
   left: 100px;
   bottom: 10px;
   font-size: 1.4rem;
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .link-container {
@@ -301,7 +306,7 @@ hr {
 }
 
 .link_bg-github {
-  background-image: var(--github-icon);
+  background-image: var(--github-icon_secondary);
 }
 
 .link_bg-link {
@@ -309,7 +314,7 @@ hr {
 }
 
 .link_bg-linkedin {
-  background-image: var(--linkedin-icon);
+  background-image: var(--linkedin-icon_secondary);
 }
 
 .link_bg-goodreads {
