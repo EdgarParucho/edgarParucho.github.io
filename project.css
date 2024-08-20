@@ -1,0 +1,206 @@
+/* Following BEM Methodology / https://en.bem.info/methodology/quick-start */
+
+:root {
+  --primary: #D9D9D9;
+  --secondary: #262626;
+  --accent: #060606;
+  --github-icon: url('https://img.icons8.com/?size=100&id=20675&format=png&color=262626');
+  --link-icon: url('https://img.icons8.com/?size=100&id=o90MnZhnB2CM&format=png&color=262626');
+  --chevron-icon: url('https://img.icons8.com/?size=100&id=40217&format=png&color=262626');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1.8rem;
+  color: var(--secondary);
+  background-color: var(--primary);
+}
+
+.project {
+  display: grid;
+  padding: 2rem 1rem 2rem 2rem;
+}
+
+.heading {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  color: var(--accent);
+}
+
+.subheading {
+  margin-top: 2rem;
+  font-family: "Radley", serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.paragraph {
+  margin-top: 1rem;
+}
+
+.img-container {
+  width: 100%;
+}
+
+.image {
+  margin-top: 1rem;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale() contrast(80%);
+}
+
+.card__title {
+  margin-top: 1rem;
+  font-family: "Radley", serif;
+  font-size: 1.8rem;
+  color: var(--secondary);
+}
+
+.card__text {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  text-align: left;
+  color: var(--secondary);
+}
+
+.label-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.label {
+  width: 100px;
+  height: 18px;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border-radius: 20px;
+}
+
+.label_bordered {
+  border: 1px solid var(--secondary);
+}
+
+.link-container {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+}
+
+.link {
+  display: inline-block;
+  padding: .2rem 1rem .2rem 2rem;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1.8rem;
+  color: var(--secondary);
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: left;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.link_bg-link {
+  background-image: var(--link-icon);
+}
+
+.link_bg-github {
+  background-image: var(--github-icon);
+}
+
+.link_bg-chevron {
+  background-image: var(--chevron-icon);
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .project {
+    margin: 0;
+    padding: 0;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 45vh 35vh 20vh;
+    gap: .2rem;
+  }
+
+  .image_lg {
+    margin: 0;
+    height: 100%;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+  
+  .image_md {
+    margin: 0;
+    height: 100%;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    
+  }
+
+  .heading {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    font-size: 6rem;
+  }
+
+  .text {
+    padding-left: 1rem;
+    width: 90%;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+
+  .subheading {
+    padding-left: 1rem;
+    font-size: 3rem;
+  }
+
+  .label-container {
+    padding-left: 1rem;
+    margin-bottom: 0;
+    padding-left: 1rem;
+    width: 90%;
+  }
+  
+  .link-container {
+    margin-top: 2rem;
+    padding-left: 1rem;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+
+  .features {
+    grid-row: 2 / 4;
+    grid-column: 2 / 3;
+  }
+
+  .card-container {
+    padding-left: 1rem;
+  }
+
+}
