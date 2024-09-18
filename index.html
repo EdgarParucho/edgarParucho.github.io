@@ -10,88 +10,42 @@
   <title>Edgar Parucho</title>
 </head>
 <body>
-  <aside class="sidebar">
+  <aside id="sidebar" class="sidebar sidebar_hidden">
     <div class="sidebar__content">
-      <button class="sidebar__button">Close</button>
-      <h4 class="sidebar__title">MANTRA</h4>
+      <button class="sidebar__button" onclick="hideSidebar()">Close</button>
+      <h4 class="sidebar__title"></h4>
       <h5 class="sidebar__subtitle">Top Features</h5>
       <dl>
         <div class="card">
-          <img src="./assets/mantra_feature-1-min.jpg" alt="Mantra's UI bar and line charts about the service on smartphone." class="card__picture">
-          <dt class="card__title">Efficacy + efficiency</dt>
-          <dd>
-            <p class="card__text">Every UI component is designed to provide easy-to-read, relevant information. You have everything you need for effective decision-making at your fingertips.</p>
+          <img src="" alt="" class="card__picture">
+          <dt class="card__title"></dt>
+          <dd class="card__text">
           </dd>
         </div>
         <hr class="card-divider">
         <div class="card">
-          <img src="./assets/mantra_feature-2-min.jpg" alt="Mantra's UI informative cards about service indicators on smartphone." class="card__picture">
-          <dt class="card__title">User-friendly</dt>
-          <dd>
-            <p class="card__text">Grasp the service status at a glance. Minimize input errors through intuitive, step-by-step forms. Find information rapidly with powerful filters. Mantra aims to boost your work without adding complications.</p>
+          <img src="" alt="" class="card__picture">
+          <dt class="card__title"></dt>
+          <dd class="card__text">
           </dd>
         </div>
         <hr class="card-divider">
         <div class="card">
-          <img src="./assets/mantra_feature-3-min.jpg" alt="Mantra's large menu of features on smartphone." class="card__picture">
-          <dt class="card__title">Full control</dt>
-          <dd>
-            <p class="card__text">From clients, to products, users, etc. You decide who is able to manipulate sensitive information.</p>
+          <img src="" alt="" class="card__picture">
+          <dt class="card__title"></dt>
+          <dd class="card__text">
           </dd>
         </div>
         <hr class="card-divider">
         <div class="card">
-          <img src="./assets/mantra_feature-4-min.jpg" alt="Mantra app running on smartphone and desktop PC." class="card__picture">
-          <dt class="card__title">Availability</dt>
-          <dd>
-            <p class="card__text">No matter where you are or what device you use, you only need an internet connection and a web browser to access Mantra's full set of features.</p>
+          <img src="" alt="" class="card__picture">
+          <dt class="card__title"></dt>
+          <dd class="card__text">
           </dd>
         </div>
       </dl>
     </div>
     <div class="sidebar__bg"></div>
-    <div class="sidebar__content">
-      <button class="sidebar__button">Close</button>
-      <h4 class="sidebar__title">WALLANCE</h4>
-      <h5 class="sidebar__subtitle">Top Features</h5>
-      <dl>
-        <div class="card">
-          <img src="./assets/wallance_feature-1-min.jpg" alt="Wallance's UI on smartphone: fund cards with their independent status (budget)." class="card__picture">
-          <dt class="card__title">Funds</dt>
-          <dd>
-            <p class="card__text">In real life, you probably separate your savings from your bills and optional expenses. Wallance allows you to create Funds so you can implement your own strategies.</p>
-          </dd>
-        </div>
-        <hr class="card-divider">
-        <div class="card">
-          <img src="./assets/wallance_feature-2-min.jpg" alt="Wallance's UI on desktop PC: pie and line charts to measure movements by tag and month." class="card__picture">
-          <dt class="card__title">Tags</dt>
-          <dd>
-            <p class="card__text">Tag your incomes and expenses so you can visually measure and be aware of where and how everything comes and goes.</p>
-          </dd>
-        </div>
-        <hr class="card-divider">
-        <div class="card">
-          <img src="./assets/wallance_feature-3-min.jpg" alt="Wallance's UI on smartphone: query form with multiple options." class="card__picture">
-          <dt class="card__title">Easy querying</dt>
-          <dd>
-            <p class="card__text">Get any data fast and easily filtering by any property of the record through an intuitive form.</p>
-          </dd>
-        </div>
-        <hr class="card-divider">
-        <div class="card">
-          <img src="./assets/wallance_feature-4-min.jpg" alt="Wallance app running on tablet and smartphone." class="card__picture">
-          <dt class="card__title">Beyond the features</dt>
-          <dd>
-            <p class="card__text">
-              The features of Wallance provide status, organization, knowledge and awareness of your movements,
-              but the purpose is to help you to find the best way to manage your finance by yourself, through your own movements.
-            </p>
-          </dd>
-        </div>
-      </dl>
-    </div>
-    <div class="sidebar__bg"></div>  
   </aside>
 </aside>
   <aside class="side-menu">
@@ -144,11 +98,11 @@
       </article>
     </section>
     <hr class="section-divider">
-    <section class="grid grid_rows-auto" id="projects-section">
+    <section class="grid grid_rows-auto">
       <div class="grid__item-lg grid__item-lg_pl-8 grid__item-lg_relative">
         <dl class="card-container">
           <div class="card">
-            <img src="assets/mantra_cover-min.jpg" alt="Mantra login page on desktop PC." class="card__picture">
+            <img src="assets/mantra/mantra_cover-min.jpg" alt="Mantra login page on desktop PC." class="card__picture">
             <dt class="card__title">MANTRA</dt>
             <dd>
               <p class="card__text">A highly customized application to enhance service management of an important company for the banking industry in Venezuela.</p>
@@ -161,12 +115,11 @@
               </ul>
             </dd>
             <div class="card__action-container">
-              <button type="button" class="card__action">Features</button>
-              <a href="#" class="card__action">Demo</a>
+              <button type="button" class="card__action" onclick="showSidebar('mantra')">Features</button>
             </div>
           </div>
           <div class="card">
-            <img src="./assets/wallance_cover-min.jpg" alt="Wallance app home page on smartphone." class="card__picture">
+            <img src="./assets/wallance/wallance_cover-min.jpg" alt="Wallance app home page on smartphone." class="card__picture">
             <dt class="card__title">WALLANCE</dt>
             <dd>
               <p class="card__text">An application to track financial records and organize savings independently.</p>
@@ -181,7 +134,7 @@
               </ul>
             </dd>
             <div class="card__action-container">
-              <button type="button" class="card__action">Features</button>
+              <button type="button" class="card__action" onclick="showSidebar('wallance')">Features</button>
               <a href="https://wallance.vercel.app/" class="card__action">Demo</a>
             </div>
           </div>
@@ -295,5 +248,6 @@
   <footer class="footer">
     <p>2024 Edgar Parucho</p>
   </footer>
+  <script src="./script.js"></script>
 </body>
 </html>

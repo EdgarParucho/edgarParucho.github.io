@@ -29,7 +29,6 @@ body {
   font-size: 1.8rem;
   color: var(--secondary);
   background-color: var(--primary);
-  /* overflow: hidden; */
 }
 
 header, main {
@@ -82,13 +81,16 @@ header, main {
 }
 
 .sidebar {
-  display: none;
   position: fixed;
   top: 0;
   right: 0;
   width: 100%;
   height: 100vh;
   z-index: 10;
+}
+
+.sidebar_hidden {
+  display: none;
 }
 
 .sidebar__title {
@@ -126,6 +128,7 @@ header, main {
   border-radius: 2px;
   color: var(--primary);
   z-index: 20;
+  cursor: pointer;
 }
 
 .sidebar__content {
