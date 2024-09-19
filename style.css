@@ -260,7 +260,7 @@ header, main {
 }
 
 .picture_zoom {
-  animation: zoom 16s ease-in-out;
+  animation: zoom 18s ease-in-out;
   animation-iteration-count: infinite;
 }
 
