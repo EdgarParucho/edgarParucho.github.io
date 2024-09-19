@@ -11,9 +11,9 @@
 </head>
 <body>
   <aside id="sidebar" class="sidebar sidebar_hidden">
-    <div class="sidebar__content">
-      <button class="sidebar__button" onclick="hideSidebar()">Close</button>
-      <h4 class="sidebar__title"></h4>
+    <div id="sidebar-content" class="sidebar__content">
+      <button class="sidebar__button" onclick="hideFeatures()">Close</button>
+      <h4 id="sidebar-title" class="sidebar__title"></h4>
       <h5 class="sidebar__subtitle">Top Features</h5>
       <dl>
         <div class="card">
@@ -45,9 +45,8 @@
         </div>
       </dl>
     </div>
-    <div class="sidebar__bg"></div>
+    <div class="sidebar__bg" onclick="hideFeatures()"></div>
   </aside>
-</aside>
   <aside class="side-menu">
     <a href="https://www.linkedin.com/in/edgarparucho/" target="_blank" class="side-menu__link side-menu__link_linkedin"></a>
     <a href="https://github.com/EdgarParucho" target="_blank" class="side-menu__link side-menu__link_github"></a>
@@ -115,7 +114,7 @@
               </ul>
             </dd>
             <div class="card__action-container">
-              <button type="button" class="card__action" onclick="showSidebar('mantra')">Features</button>
+              <button type="button" class="card__action" onclick="showFeatures('mantra')">Features</button>
             </div>
           </div>
           <div class="card">
@@ -134,7 +133,7 @@
               </ul>
             </dd>
             <div class="card__action-container">
-              <button type="button" class="card__action" onclick="showSidebar('wallance')">Features</button>
+              <button type="button" class="card__action" onclick="showFeatures('wallance')">Features</button>
               <a href="https://wallance.vercel.app/" class="card__action">Demo</a>
             </div>
           </div>

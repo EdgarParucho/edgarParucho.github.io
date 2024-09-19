@@ -54,11 +54,19 @@ const featuresByProject = {
 };
 
 
-function showSidebar(projectName) {
-  const sidebar = document.getElementById("sidebar");
-  sidebar.setAttribute('class', 'sidebar');
-  setSidebarContent(projectName);
+function showFeatures(projectName) {
+  showSidebar();
   hideBodyScrollbar();
+  setSidebarContent(projectName);
+  setTimeout(() => showSidebarContent(), .1);
+}
+
+function showSidebar() {
+  document.getElementById("sidebar").classList.remove("sidebar_hidden");
+}
+
+function hideBodyScrollbar() {
+  document.getElementsByTagName("body")[0].setAttribute("style", "overflow: hidden;");
 }
 
 function setSidebarContent(projectName) {
@@ -67,34 +75,44 @@ function setSidebarContent(projectName) {
 }
 
 function setSidebarTitle(projectName) {
-  const [sidebarTitle] = document.getElementById('sidebar').getElementsByClassName('sidebar__title');
+  const sidebarTitle = document.getElementById("sidebar-title");
   sidebarTitle.textContent = projectName.toUpperCase();
   sidebarTitle.scrollIntoView({ behavior: "smooth" });
 }
 
 function setSidebarCards(projectName) {
-  const cards = document.getElementById('sidebar').getElementsByClassName('card');
+  const cards = document.getElementById("sidebar").getElementsByClassName("card");
   for (let i in featuresByProject[projectName]) {
-    const [img] = cards[i].getElementsByTagName('img');
+    const [featureImg] = cards[i].getElementsByTagName("img");
     const [featureTitle] = cards[i].getElementsByTagName("dt");
     const [featureDescription] = cards[i].getElementsByTagName("dd");
-    img.setAttribute('src', featuresByProject[projectName][i].featureImgPath);
-    img.setAttribute('alt', featuresByProject[projectName][i].featureAlt);
+    featureImg.setAttribute("src", featuresByProject[projectName][i].featureImgPath);
+    featureImg.setAttribute("alt", featuresByProject[projectName][i].featureAlt);
     featureTitle.textContent = featuresByProject[projectName][i].featureTitle;
     featureDescription.textContent = featuresByProject[projectName][i].featureDescription;
   }
 }
 
-function hideSidebar() {
-  const sidebar = document.getElementById("sidebar");
-  sidebar.setAttribute('class', 'sidebar sidebar_hidden');
-  showBodyScrollbar();
+function showSidebarContent() {
+  document.getElementById("sidebar-content")
+    .classList.add("sidebar__content_visible");
 }
 
-function hideBodyScrollbar() {
-  document.getElementsByTagName('body')[0].setAttribute('style', 'overflow: hidden;');
+function hideFeatures() {
+  hideSidebarContent();
+  showBodyScrollbar();
+  setTimeout(() => hideSidebar(), 300);
+}
+
+function hideSidebarContent() {
+  document.getElementById("sidebar-content")
+    .classList.remove("sidebar__content_visible");
 }
 
 function showBodyScrollbar() {
-  document.getElementsByTagName('body')[0].removeAttribute('style');
+  document.getElementsByTagName("body")[0].removeAttribute("style");
+}
+
+function hideSidebar() {
+  document.getElementById("sidebar").classList.add("sidebar_hidden");
 }

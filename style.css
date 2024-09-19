@@ -140,6 +140,12 @@ header, main {
   overflow-y: auto;
   z-index: 20;
   background-color: var(--primary);
+  transition: transform .3s;
+  transform: translate(400px, 0);
+}
+
+.sidebar__content_visible {
+  transform: translate(0, 0);
 }
 
 .grid {
