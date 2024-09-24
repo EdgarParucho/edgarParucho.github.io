@@ -186,6 +186,7 @@ header, main {
   background-color: var(--primary);
   padding: 2px 8px;
   border-radius: 50%;
+  font-weight: 400;
 }
 
 .ellipse::before {
@@ -296,15 +297,14 @@ header, main {
 
 .card__title {
   margin-top: 1rem;
-  margin-left: 1rem;
+  margin-left: .5rem;
   font-family: "Radley", serif;
   font-size: 1.8rem;
   color: var(--secondary);
 }
 
 .card__text {
-  margin-top: 1rem;
-  margin-left: 1rem;
+  margin: 1rem .5rem 0;
   text-align: left;
   font-size: 1.2rem;
   color: var(--secondary);
@@ -313,7 +313,7 @@ header, main {
 .card__label-container {
   position: absolute;
   bottom: 40px;
-  left: 10px;
+  left: .5rem;
   height: 90px;
   display: flex;
   align-content: start;
@@ -411,7 +411,7 @@ header, main {
 }
 
 .link {
-  width: 208px;
+  width: 216px;
   display: block;
   padding-right: 2.2rem;
   border: none;
@@ -426,6 +426,14 @@ header, main {
   background-size: 18px;
   background-position: right;
   cursor: pointer;
+}
+
+.link_absolute {
+  position: absolute;
+}
+
+.link_right {
+  right: 0;
 }
 
 .link_mt-2 {
