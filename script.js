@@ -84,7 +84,7 @@ const featuresByProject = {
         en: "Wallance: pie and line charts to measure movements by tag and month.",
       },
       featureTitle: {
-        es: "Tags",
+        es: "Etiquetas",
         en: "Tags",
       },
       featureDescription: {
@@ -114,8 +114,8 @@ const featuresByProject = {
         en: "Wallance app running on tablet and smartphone.",
       },
       featureTitle: {
-        es: "Beyond the features",
-        en: "Más allá de las características",
+        es: "Más allá de las características",
+        en: "Beyond the features",
       },
       featureDescription: {
         es: "Las características de Wallance proveen estado, organización, conocimiento y conciencia de tus movimientos, pero el propósito es ayudarte a encontrar la mejor manera de manejar tus finanzas por ti mismo, a través de tus propios movimientos",
