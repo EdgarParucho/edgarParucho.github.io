@@ -113,7 +113,29 @@
             </dd>
             <div class="card__action-container">
               <button type="button" class="card__action" onclick="showFeatures({ projectName: 'wallance', lang: 'en' })">Features</button>
-              <a href="https://wallance.vercel.app/" class="card__action">Demo</a>
+              <a href="https://wallance.vercel.app/" class="card__action" target="_blank">Demo</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/lighthouse/lighthouse_cover-min.jpg" alt="Lighthouse app on smartphone." class="card__picture">
+            <dt class="card__title">LIGHTHOUSE</dt>
+            <dd>
+              <p class="card__text">Aplicación para manejar un registro de hábitos personales.</p>
+              <ul class="card__label-container">
+                <li class="label label_text-sm label_filled">React.js</li>
+                <li class="label label_text-sm label_filled">CSS</li>
+                <li class="label label_text-sm label_filled">Node.js</li>
+                <li class="label label_text-sm label_filled">Express.js</li>
+                <li class="label label_text-sm label_filled">PostgreSQL</li>
+                <li class="label label_text-sm label_filled">Sequelize</li>
+                <li class="label label_text-sm label_filled">Docker</li>
+              </ul>
+            </dd>
+            <div class="card__action-container">
+              <button type="button" class="card__action" onclick="showFeatures({ projectName: 'lighthouse', lang: 'en' })">Características</button>
+              <a href="https://lighthouse-delta.vercel.app" class="card__action" target="_blank">
+                Demo
+              </a>
             </div>
           </div>
         </dl>
@@ -122,33 +144,35 @@
         <div id="sidebar-content" class="sidebar__content">
           <button class="sidebar__button" onclick="hideFeatures()">Close</button>
           <h4 id="sidebar-title" class="sidebar__title"></h4>
-          <h5 class="sidebar__subtitle">Top Features</h5>
+          <h5 class="sidebar__subtitle">About the project</h5>
           <dl>
-            <div class="card">
+            <div id="features-card" class="card">
               <img src="" alt="" class="card__picture">
-              <dt class="card__title"></dt>
+              <dt class="card__title">Main features</dt>
               <dd class="card__text">
+                <p class="paragraph"></p>
+                <p class="paragraph"></p>
+                <p class="paragraph"></p>
               </dd>
             </div>
             <hr class="card-divider">
-            <div class="card">
+            <div id="development-card" class="card">
               <img src="" alt="" class="card__picture">
-              <dt class="card__title"></dt>
+              <dt class="card__title">Management and development</dt>
               <dd class="card__text">
+                <p class="paragraph"></p>
+                <p class="paragraph"></p>
+                <p class="paragraph"></p>
               </dd>
             </div>
             <hr class="card-divider">
-            <div class="card">
+            <div id="solutions-card" class="card">
               <img src="" alt="" class="card__picture">
-              <dt class="card__title"></dt>
+              <dt class="card__title">Problems solved</dt>
               <dd class="card__text">
-              </dd>
-            </div>
-            <hr class="card-divider">
-            <div class="card">
-              <img src="" alt="" class="card__picture">
-              <dt class="card__title"></dt>
-              <dd class="card__text">
+                <p class="paragraph"></p>
+                <p class="paragraph"></p>
+                <p class="paragraph"></p>
               </dd>
             </div>
           </dl>
@@ -159,7 +183,7 @@
         <h2 class="subheading">Projects</h2>
         <p class="paragraph">I focus on having meaningful projects over the size of my portfolio. As Eric Ries wrote: <span class="font-italic">“The big question of our time is not Can it be built? but Should it be built?”</span>.</p>
         <p class="paragraph">For me, writing code is about solving real life problems, deepening my expertise, learning new technologies, practices, or anything that elevates the quality of my work.</p>
-        <p class="paragraph">My projects share certain foundations such as code quality, performance, and UI design.</p>
+        <p class="paragraph">I prioritize certain foundations such as code quality, performance, and UI design.</p>
         <div class="label-container">
           <input type="checkbox" id="tech-1" class="checkbox">
           <label for="tech-1" class="label label_bordered label_pointer">HTML</label>
@@ -261,6 +285,9 @@
   <footer class="footer">
     <p>2024 Edgar Parucho</p>
   </footer>
+  <script src="./aboutProjects/aboutMantra.js"></script>
+  <script src="./aboutProjects/aboutWallance.js"></script>
+  <script src="./aboutProjects/aboutLighthouse.js"></script>
   <script src="./script.js"></script>
 </body>
 </html>
