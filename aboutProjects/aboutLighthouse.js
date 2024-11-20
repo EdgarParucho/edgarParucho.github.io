@@ -25,12 +25,12 @@ const aboutLighthouse = {
     es: [
       "Lighthouse marca otra etapa para mi en términos de organización técnica y gestión de proyectos.",
       "Ocupé 46 días desde el planteamiento al despliegue. Organicé el trabajo en etapas. Utilicé herramientas dedicadas para diseñar, documentar y gestionar tareas. Realicé al menos un commit diario una vez inicie el código.",
-      "Decidí hacerlo mi primer proyecto con React.js para mi portafolio. Utilicé CSS plano siguiendo la metodología BEM con la que me he estado familiarizando, y el stack de back-end de proyectos anteriores, solo que escribiendo mejor código, más escalable, y también mejorando el trabajo de la base de datos y el ORM.",
+      "Utilicé React.js, CSS plano siguiendo la metodología BEM, y el stack de back-end de proyectos anteriores, pero siguiendo mejores prácticas y optimizando el trabajo en la base de datos y el ORM.",
     ],
     en: [
       "Lighthouse marks another stage for me in terms of technical organization and project management.",
       "It took me 46 days from planning to deployment. I organized the work in stages. I used dedicated tools for designing, documenting and managing tasks. I made at least a commit each day once I started to code.",
-      "I decided it would be the first project on my portfolio with React.js. I used plain CSS following the BEM methodology I’ve been familiarizing with, and to use the same stack from previous projects for the back-end, only that writing better, scalable code, and also doing a better work with the database and the ORM.",
+      "I used React.js, plain CSS following the BEM methodology, and the same stack from previous projects for the back-end, but with better practices and also optimizing the work for the database and the ORM.",
     ],
   },
   solutionsImg: "./assets/lighthouse/lighthouse_3.jpg",
