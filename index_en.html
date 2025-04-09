@@ -137,10 +137,31 @@
               </ul>
             </dd>
             <div class="card__action-container">
-              <button type="button" class="card__action" onclick="showFeatures({ projectName: 'lighthouse', lang: 'en' })">Características</button>
+              <button type="button" class="card__action" onclick="showFeatures({ projectName: 'lighthouse', lang: 'en' })">Features</button>
               <a href="https://lighthouse-delta.vercel.app" class="card__action" target="_blank">
                 Demo
               </a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/notebook/notebook_cover.webp" alt="Notebook's reference form" class="card__picture">
+            <dt class="card__title">NOTEBOOK</dt>
+            <dd>
+              <p class="card__text">Custom web application to save notes.</p>
+              <ul class="card__label-container">
+                <li class="label label_text-sm label_filled">Vue.js</li>
+                <li class="label label_text-sm label_filled">TypeScript</li>
+                <li class="label label_text-sm label_filled">CSS</li>
+                <li class="label label_text-sm label_filled">Node.js</li>
+                <li class="label label_text-sm label_filled">Express.js</li>
+                <li class="label label_text-sm label_filled">PostgreSQL</li>
+                <li class="label label_text-sm label_filled">Sequelize</li>
+                <li class="label label_text-sm label_filled">Docker</li>
+              </ul>
+            </dd>
+            <div class="card__action-container">
+              <button type="button" class="card__action" onclick="showFeatures({ projectName: 'notebook', lang: 'en' })">Features</button>
+              <a href="https://wallance.vercel.app/" class="card__action" target="_blank">Demo</a>
             </div>
           </div>
         </dl>
@@ -186,7 +207,7 @@
       </aside>    
       <div class="grid__item-md grid__item-md_align-start">
         <h2 class="subheading">Projects</h2>
-        <p class="paragraph">I focus on having meaningful projects over the size of my portfolio. As Eric Ries wrote: <span class="font-italic">“The big question of our time is not Can it be built? but Should it be built?”</span>.</p>
+        <p class="paragraph">I focus on having meaningful projects over the size of my portfolio. As Eric Ries wrote: <q class="font-italic">“The big question of our time is not Can it be built? but Should it be built?”</q>.</p>
         <p class="paragraph">For me, writing code is about solving real life problems, deepening my expertise, learning new technologies, practices, or anything that elevates the quality of my work.</p>
         <p class="paragraph">I prioritize certain foundations such as code quality, performance, and UI design.</p>
         <div class="label-container">
@@ -197,15 +218,17 @@
           <input type="checkbox" id="tech-3" class="checkbox">
           <label for="tech-3" class="label label_bordered label_pointer">JavaScript</label>
           <input type="checkbox" id="tech-4" class="checkbox">
-          <label for="tech-4" class="label label_bordered label_pointer">Vue.js</label>
+          <label for="tech-4" class="label label_bordered label_pointer">TypeScript</label>
           <input type="checkbox" id="tech-5" class="checkbox">
-          <label for="tech-5" class="label label_bordered label_pointer">React.js</label>
+          <label for="tech-5" class="label label_bordered label_pointer">Vue.js</label>
           <input type="checkbox" id="tech-6" class="checkbox">
-          <label for="tech-6" class="label label_bordered label_pointer">Node.js</label>
+          <label for="tech-6" class="label label_bordered label_pointer">React.js</label>
           <input type="checkbox" id="tech-7" class="checkbox">
-          <label for="tech-7" class="label label_bordered label_pointer">Express.js</label>
+          <label for="tech-7" class="label label_bordered label_pointer">Node.js</label>
           <input type="checkbox" id="tech-8" class="checkbox">
-          <label for="tech-8" class="label label_bordered label_pointer">MongoDB</label>
+          <label for="tech-8" class="label label_bordered label_pointer">Express.js</label>
+          <input type="checkbox" id="tech-9" class="checkbox">
+          <label for="tech-9" class="label label_bordered label_pointer">MongoDB</label>
         </div>
       </div>
     </section>
@@ -295,6 +318,7 @@
   </footer>
   <script src="./aboutProjects/aboutMantra.js"></script>
   <script src="./aboutProjects/aboutWallance.js"></script>
+  <script src="./aboutProjects/aboutNotebook.js"></script>
   <script src="./aboutProjects/aboutLighthouse.js"></script>
   <script src="./script.js"></script>
 </body>

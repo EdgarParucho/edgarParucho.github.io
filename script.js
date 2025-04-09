@@ -1,7 +1,8 @@
 const aboutProject = {
   mantra: aboutMantra,
   wallance: aboutWallance,
-  lighthouse: aboutLighthouse
+  lighthouse: aboutLighthouse,
+  notebook: aboutNotebook,
 };
 
 
