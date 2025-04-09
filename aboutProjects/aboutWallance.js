@@ -1,5 +1,5 @@
 const aboutWallance = {
-  featuresImg: "./assets/wallance/wallance_feature-1-min.jpg",
+  featuresImg: "./assets/wallance/wallance_feature-1.jpg",
   featuresImgAlt: {
     es: "Interfaz de Wallance en teléfono: tarjetas de fondos con estados independientes (presupuesto).",
     en: "Wallance's UI on smartphone: fund cards with their independent status (budget).",
@@ -16,7 +16,7 @@ const aboutWallance = {
       "User can create multiple funds to organize records according to their unique needs or preferences.",
     ],
   },
-  developmentImg: "./assets/wallance/wallance_feature-2-min.jpg",
+  developmentImg: "./assets/wallance/wallance_feature-2.jpg",
   developmentImgAlt: {
     es: "Grafica circular y linear para medir movimientos por etiquetas y mes.",
     en: "Wallance: pie and line charts to measure movements by tag and month.",
@@ -33,7 +33,7 @@ const aboutWallance = {
       "Wallance is a personal project. I maintain the app adding features or optimizations progressively.",
     ],
   },
-  solutionsImg: "./assets/wallance/wallance_feature-3-min.jpg",
+  solutionsImg: "./assets/wallance/wallance_feature-3.jpg",
   solutionsImgAlt: {
     es: "Interfaz de Wallance desde móvil: formulario de consultas con múltiples opciones.",
     en: "Wallance's UI on smartphone: query form with multiple options.",

@@ -5,7 +5,6 @@ const aboutProject = {
   notebook: aboutNotebook,
 };
 
-
 function showFeatures({ projectName, lang }) {
   showSidebar();
   hideBodyScrollbar();

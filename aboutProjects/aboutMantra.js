@@ -1,5 +1,5 @@
 const aboutMantra = {
-  featuresImg: "./assets/mantra/mantra_feature-1-min.jpg",
+  featuresImg: "./assets/mantra/mantra_feature-1.jpg",
   featuresImgAlt: {
     es: "Interfaz de Mantra en móvil: gráficas de barra y linea acerca del servicio.",
     en: "Mantra's UI bar and line charts about the service on smartphone.",
@@ -16,7 +16,7 @@ const aboutMantra = {
       "Mantra is a progressive web application, among other benefits, this allows it to be installed and behave like a native app.",
     ],
   },
-  developmentImg: "./assets/mantra/mantra_feature-2-min.jpg",
+  developmentImg: "./assets/mantra/mantra_feature-2.jpg",
   developmentImgAlt: {
     es: "Interfaz de Mantra en móvil: tarjetas informativas acerca de los indicadores del servicio.",
     en: "Mantra's UI informative cards about service indicators on smartphone.",
@@ -33,7 +33,7 @@ const aboutMantra = {
       "Mantra is currently on production and owned by Microfilms Center.",
     ],
   },
-  solutionsImg: "./assets/mantra/mantra_feature-3-min.jpg",
+  solutionsImg: "./assets/mantra/mantra_feature-3.jpg",
   solutionsImgAlt: {
     es: "Amplio menu de características de Mantra desde un teléfono inteligente.",
     en: "Mantra's large menu of features on smartphone.",
