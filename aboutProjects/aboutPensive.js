@@ -1,25 +1,25 @@
-const aboutNotebook = {
-  featuresImg: "./assets/notebook/notebook_1.webp",
+const aboutPensive = {
+  featuresImg: "./assets/pensive/pensive_1.webp",
   featuresImgAlt: {
-    es: "Interfaz de Notebook editando una nota.",
-    en: "Notebook interface editing a note.",
+    es: "Interfaz de Pensive editando una nota.",
+    en: "Pensive interface editing a note.",
   },
   featuresParagraphs: {
     es: [
-      "Notebook es una aplicación web para guardar notas, con el objetivo de relacionarlas a través de etiquetas y referencias.",
+      "Pensive es una aplicación web para guardar notas, con el objetivo de relacionarlas a través de etiquetas y referencias.",
       "Es un proyecto con un diseño minimalista y un enfoque en la simplicidad.",
       "Facilita agregar referencias consistentes en estilo MLA con un formulario dedicado. También es posible especificar palabras clave para clasificar las notas, y ejecutar búsquedas teniendo en cuenta cualquiera de estos atributos.",
     ],
     en: [
-      "Notebook is a web application for saving notes, with the goal of relating them through keywords and references.",
+      "Pensive is a web application for saving notes, with the goal of relating them through keywords and references.",
       "It is a project with a minimalist design and a focus on simplicity.",
       "It facilitates adding references in MLA style with a dedicated form. It is also possible to specify keywords to classify notes, and execute searches taking any of these attributes into account.",
     ],
   },
-  developmentImg: "./assets/notebook/notebook_2.webp",
+  developmentImg: "./assets/pensive/pensive_2.webp",
   developmentImgAlt: {
-    es: "Notebook en un teléfono y un documento al lado.",
-    en: "Notebook on a phone and a document next to it.",
+    es: "Pensive en un teléfono y un documento al lado.",
+    en: "Pensive on a phone and a document next to it.",
   },
   developmentParagraphs: {
     es: [
@@ -33,10 +33,10 @@ const aboutNotebook = {
       "Once the MVP was defined and achieved, I plan to continue developing its potential.",
     ],
   },
-  solutionsImg: "./assets/notebook/notebook_3.webp",
+  solutionsImg: "./assets/pensive/pensive_3.webp",
   solutionsImgAlt: {
-    es: "Formulario palabras clave en Notebook.",
-    en: "Keyword form in Notebook.",
+    es: "Formulario palabras clave en Pensive.",
+    en: "Keyword form in Pensive.",
   },
   solutionsParagraphs: {
     es: [

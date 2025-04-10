@@ -2,7 +2,7 @@ const aboutProject = {
   mantra: aboutMantra,
   wallance: aboutWallance,
   lighthouse: aboutLighthouse,
-  notebook: aboutNotebook,
+  pensive: aboutPensive,
 };
 
 function showFeatures({ projectName, lang }) {
